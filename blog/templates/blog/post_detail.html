@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if posts.published_date %}
+            <div class="date">
+                {{ posts.published_date }}
+            </div>
+        {% endif %}
+        <h2>{{ posts.title }}</h2>
+        <p>{{ posts.text|linebreaksbr }}</p>
+        <p> {{ posts.pk }}  {{ user.pk }}</p>
+    </div>
+    <div>
+        {% if user.pk != posts.pk %}
+            <h2>Ye kis line main aa gaye bhai saab</h2>
+        {% endif %}
+    </div>
+{% endblock %}
