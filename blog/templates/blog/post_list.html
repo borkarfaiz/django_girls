@@ -26,4 +26,18 @@
         Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta
         gravida at eget met us. Fusce dapibus, tellus ac cursus commod, tortor mauris condimentum nibh, ut f.
     </p>
+
+
+
+{% for post in posts %}
+<div>
+    <p> published date {{post.published_date}}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>
+        {{post.text|linebreaksbr}}
+    </p>
+</div>
+{% endfor %}
 </body>
+
+
